@@ -301,7 +301,7 @@ select {
 }
 
 .split {
-  display: grid;
+  display: block;
   grid-template-columns: 20% 80%;
   grid-gap: 20px;
 }
@@ -336,12 +336,13 @@ select {
   margin-top: 0;
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 600px) {
   :root {
     --baseFontSize: 112.5%;
   }
 
-  .grid {
+  .grid,
+  .split {
     display: grid;
   }
 
