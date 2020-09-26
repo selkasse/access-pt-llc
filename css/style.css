@@ -394,6 +394,14 @@ select {
     flex-direction: row;
   }
 
+  .first p {
+    margin-top: 0;
+  }
+
+  .flex .flex-row {
+    justify-content: flex-start;
+  }
+
   .flex .flex-row ul {
     justify-self: flex-end;
     /* margin-top: 0;
