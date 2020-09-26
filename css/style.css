@@ -46,7 +46,7 @@
   /** Positioning */
   /*? You can think of the 2.5% padding as 95% width */
   --containerPadding: 2.5%;
-  --headerHeight: 3rem;
+  --headerHeight: 6rem;
   --borderRadius: 10px;
 }
 
@@ -187,9 +187,14 @@ header {
   height: var(--headerHeight);
   box-shadow: var(--level-2);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 0 var(--containerPadding);
+}
+
+header p {
+  color: var(--lightBlue);
+  font-size: var(--smallText);
 }
 
 header nav a {
