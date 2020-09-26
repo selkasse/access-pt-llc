@@ -322,7 +322,7 @@ select {
 }
 
 .card img {
-  max-width: 50%;
+  max-width: 100%;
   min-height: 50%;
   max-height: 100%;
 }
