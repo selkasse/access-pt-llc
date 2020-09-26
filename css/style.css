@@ -46,7 +46,7 @@
   /** Positioning */
   /*? You can think of the 2.5% padding as 95% width */
   --containerPadding: 2.5%;
-  --headerHeight: 6rem;
+  --headerHeight: 4rem;
   --borderRadius: 10px;
 }
 
@@ -188,14 +188,29 @@ header {
   box-shadow: var(--level-2);
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: flex-start;
-  padding: 0 var(--containerPadding);
+  padding: 0.5rem var(--containerPadding);
+}
+
+#sub-header {
+  background: var(--lightBlue);
+  padding-top: 100px;
+
+  /* position: relative;
+  left: 0;
+  top: 0;
+  width: 100%; */
 }
 
 header p {
   color: var(--lightBlue);
   font-size: var(--smallText);
 }
+
+/* header nav {
+  align-self: flex-end;
+} */
 
 header nav a {
   color: var(--lightGray);
@@ -262,7 +277,7 @@ select {
   /** top padding = header height plus whatever visual padding we want */
   /** in other words, because the margin is 3rem tall, it's taking up the 3rem of padding we already have, */
   /** which gives the illusion of having no padding */
-  padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+  padding: calc(1rem + var(--headerHeight)) var(--containerPadding);
 }
 
 .grid {
@@ -287,7 +302,7 @@ select {
 
 .split {
   display: grid;
-  grid-template-columns: 33% 67%;
+  grid-template-columns: 20% 80%;
   grid-gap: 20px;
 }
 
@@ -298,13 +313,19 @@ select {
 
 .card {
   padding: 2em;
+  color: var(--darkBlue);
   background: var(--cardBg);
   box-shadow: var(--level-3);
   border-radius: var(--borderRadius);
 }
 
+/* .card img {
+  width: 10rem;
+} */
+
 /** Anything that is an immediate descendant of card */
 /*? First item will never have margin-top */
+
 .card > *:first-child {
   margin-top: 0;
 }
