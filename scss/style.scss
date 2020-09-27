@@ -1,56 +1,143 @@
+@import "config";
+
 * {
   box-sizing: border-box;
 }
 
-.container {
-  padding-left: 3rem;
-  padding-right: 3rem;
-
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 15px;
-  // grid-template-rows: repeat(5, auto);
-  grid-template-areas:
-    "header header"
-    "header header"
-    "slogan slogan"
-    "image1 content1";
-}
-
-h1 {
-  font-size: 1.5em;
+:root {
+  font-family: $font;
+  font-size: $baseFontSize;
+  $h1: 3.052em;
+  $h2: 2.441em;
+  $h3: 1.953em;
+  $h4: 1.563em;
+  $h5: 1.25em;
+  $smallText: 0.8em;
 }
 
 header {
-  grid-area: header;
+  background: $headerBackground;
+  font-size: $headerFontSize;
+  color: $white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $headerHeight;
+  box-shadow: $level-4;
+  padding: 3vw $containerPadding 0 $containerPadding;
+  > h1 {
+    margin-bottom: 0.1rem;
+  }
+  > div {
+    font-size: $sloganFontSize;
+  }
+  > nav {
+    margin-top: 0.25rem;
+  }
+  > nav a {
+    font-size: $navFontSize;
+    color: $yellow;
+    text-decoration: none;
+  }
+  nav a:hover {
+    border-bottom: solid 2px $lightGreen;
+  }
+  nav a + a {
+    margin-left: 10px;
+  }
 }
 
-// nav {
-//   grid-area: navs;
-// }
-
-.slogan {
-  grid-area: slogan;
+.container {
+  padding: ($headerHeight + 2rem) $containerPadding;
+  display: flex;
+  flex-direction: column;
 }
 
 .doctor-home {
-  grid-area: image1;
-}
-
-.well-known {
-  grid-area: content1;
-}
-
-@media screen and (max-width: 550px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-  .doctor-home {
-    text-align: center;
-  }
-  .doctor-home img {
+  text-align: center;
+  > img {
     width: 100%;
+  }
+}
+
+//* From type-scale.com *********************************
+@import url("https://fonts.googleapis.com/css?family=Nunito:400|Nunito:400");
+
+html {
+  font-size: $baseFontSize;
+} /*16px*/
+
+body {
+  background-color: $green;
+  font-family: $font;
+  font-weight: 400;
+  line-height: 1.65;
+  color: $lightGreen;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  margin-top: 3vh;
+  margin-bottom: 0;
+  // padding-top: 0;
+  font-size: 1.563em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small,
+.text_small {
+  font-size: 0.8em;
+}
+//* -- END type-scale.com *******************************
+
+@media screen and (min-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    grid-template-areas: "image1 content1";
+  }
+
+  .doctor-home {
+    grid-area: image1;
+  }
+
+  .well-known {
+    grid-area: content1;
   }
 }
 
