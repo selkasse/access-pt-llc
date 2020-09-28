@@ -163,31 +163,6 @@ small,
   .container {
     padding: 11.5rem 2.5%;
   }
-
-  .doctor-home {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  #dr-farouk {
-    align-self: flex-start;
-    margin-left: 20px;
-    width: 50%;
-  }
-
-  #doc-pic {
-    width: 50%;
-  }
-  #doc-pic > img {
-    width: 100%;
-  }
-
-  h4 {
-    margin-top: 0;
-    padding-top: 0;
-  }
 }
 @media screen and (min-width: 1024px) {
   .container {
