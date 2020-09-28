@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  // height: 100vh;
 }
 
 :root {
@@ -28,9 +29,18 @@ header {
   width: 100%;
   height: $headerHeight;
   box-shadow: $level-4;
-  padding: 1vh $containerPadding 0 $containerPadding;
+  // padding: 1vh $containerPadding 0 $containerPadding;
   > h1 {
     margin-bottom: 0.1rem;
+  }
+  > blockquote {
+    align-self: stretch;
+    text-align: center;
+    // margin-left: 0;
+    // margin-right: 0;
+    // padding-left: 0;
+    // padding-right: 0;
+    font-size: $sloganFontSize;
   }
   > div {
     font-size: $sloganFontSize;
@@ -57,12 +67,21 @@ header {
   padding: ($headerHeight + 2rem) $containerPadding;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 #doc-pic {
   > img {
     width: 100%;
   }
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  background: $cardBg;
+  color: $black;
+  box-shadow: $level-3;
 }
 
 //* From type-scale.com *********************************
@@ -177,7 +196,11 @@ small,
     // height: $headerHeight - 0.1rem;
     font-size: $headerFontSize + 25%;
     height: $headerHeight + $offset;
-
+    > blockquote {
+      align-self: stretch;
+      text-align: center;
+      font-size: $sloganFontSize + 25%;
+    }
     > nav a {
       font-size: $navFontSize + 11%;
     }
