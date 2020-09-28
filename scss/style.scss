@@ -36,10 +36,6 @@ header {
   > blockquote {
     align-self: stretch;
     text-align: center;
-    // margin-left: 0;
-    // margin-right: 0;
-    // padding-left: 0;
-    // padding-right: 0;
     font-size: $sloganFontSize;
   }
   > div {
@@ -70,7 +66,7 @@ header {
   height: 100vh;
 }
 
-#doc-pic {
+.doc-pic {
   > img {
     width: 100%;
   }
@@ -131,7 +127,7 @@ h4 {
   margin-top: 3vh;
   margin-bottom: 0;
   // padding-top: 0;
-  font-size: 1.563em;
+  font-size: 1.4em;
 }
 
 h5 {
@@ -152,6 +148,9 @@ small,
     > nav a {
       font-size: $navFontSize + 5%;
     }
+  }
+  h4 {
+    font-size: 1.53em;
   }
 }
 
@@ -189,16 +188,11 @@ small,
 
 @media screen and (min-width: 700px) {
   $offset: 2.5rem;
-  // :root {
-  //   font-size: $baseFontSize + 20%;
-  // }
+
   header {
-    // height: $headerHeight - 0.1rem;
     font-size: $headerFontSize + 25%;
     height: $headerHeight + $offset;
     > blockquote {
-      align-self: stretch;
-      text-align: center;
       font-size: $sloganFontSize + 25%;
     }
     > nav a {
