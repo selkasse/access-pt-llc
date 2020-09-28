@@ -28,7 +28,7 @@ header {
   width: 100%;
   height: $headerHeight;
   box-shadow: $level-4;
-  padding: 2vh $containerPadding 0 $containerPadding;
+  padding: 1vh $containerPadding 0 $containerPadding;
   > h1 {
     margin-bottom: 0.1rem;
   }
@@ -170,12 +170,12 @@ small,
 
 @media screen and (min-width: 700px) {
   $offset: 2.5rem;
-  :root {
-    font-size: $baseFontSize + 20%;
-  }
+  // :root {
+  //   font-size: $baseFontSize + 20%;
+  // }
   header {
-    height: $headerHeight - 1rem;
-    font-size: $headerFontSize + 13%;
+    // height: $headerHeight - 0.1rem;
+    font-size: $headerFontSize + 25%;
     height: $headerHeight + $offset;
 
     > nav a {
@@ -184,33 +184,8 @@ small,
   }
 
   .container {
-    padding: ($headerHeight + 3rem + $offset) $containerPadding;
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
   }
-
-  // .doctor-home {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   text-align: left;
-  // }
-
-  // #dr-farouk {
-  //   align-self: flex-start;
-  //   margin-left: 20px;
-  //   // width: 50%;
-  // }
-
-  // #doc-pic {
-  //   // width: 50%;
-  //   // > img {
-  //   //   width: 100%;
-  //   // }
-  // }
-
-  // h4 {
-  //   margin-top: 0;
-  //   padding-top: 0;
-  // }
 }
 
 @media screen and (min-width: 1024px) {
@@ -229,10 +204,11 @@ small,
   }
 }
 
-// @media screen and (min-width: 1920px) {
-//   $padding: 28rem;
-//   .container {
-//     padding-left: $padding;
-//     padding-right: $padding;
-//   }
-// }
+@media screen and (min-width: 1920px) {
+  $padding: $containerPadding + 20%;
+
+  .container {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
