@@ -28,12 +28,13 @@ header {
   width: 100%;
   height: $headerHeight;
   box-shadow: $level-4;
-  padding: 3vw $containerPadding 0 $containerPadding;
+  padding: 2vh $containerPadding 0 $containerPadding;
   > h1 {
     margin-bottom: 0.1rem;
   }
   > div {
     font-size: $sloganFontSize;
+    color: $lightGreen;
   }
   > nav {
     margin-top: 0.25rem;
@@ -42,6 +43,7 @@ header {
     font-size: $navFontSize;
     color: $yellow;
     text-decoration: none;
+    // padding-bottom: 1vh;
   }
   nav a:hover {
     border-bottom: solid 2px $lightGreen;
@@ -57,8 +59,7 @@ header {
   flex-direction: column;
 }
 
-.doctor-home {
-  text-align: center;
+#doc-pic {
   > img {
     width: 100%;
   }
@@ -124,25 +125,98 @@ small,
 }
 //* -- END type-scale.com *******************************
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 360px) {
+  header {
+    font-size: $headerFontSize + 6%;
+    height: $headerHeight + 0.5rem;
+    > div {
+      font-size: $sloganFontSize + 1.5%;
+    }
+
+    > nav a {
+      font-size: $navFontSize + 5%;
+    }
+  }
+}
+
+@media screen and (min-width: 400px) {
+  $offset: 1.25rem;
+  header {
+    font-size: $headerFontSize + 12%;
+    height: $headerHeight + $offset;
+
+    > nav a {
+      font-size: $navFontSize + 8%;
+    }
+  }
+
   .container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
-    grid-template-areas: "image1 content1";
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  $offset: 2rem;
+  header {
+    font-size: $headerFontSize + 20%;
+    height: $headerHeight + $offset;
+
+    > nav a {
+      font-size: $navFontSize + 10%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  $offset: 2.5rem;
+  :root {
+    font-size: $baseFontSize + 20%;
+  }
+  header {
+    font-size: $headerFontSize + 28%;
+    height: $headerHeight + $offset;
+
+    > nav a {
+      font-size: $navFontSize + 11%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 3rem + $offset) $containerPadding;
   }
 
   .doctor-home {
-    grid-area: image1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
   }
 
-  .well-known {
-    grid-area: content1;
+  #dr-farouk {
+    align-self: flex-start;
+    margin-left: 20px;
+    // width: 50%;
+  }
+
+  #doc-pic {
+    width: 50%;
+    > img {
+      width: 100%;
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  $padding: 12rem;
+  $padding: $containerPadding + 10%;
   .container {
     padding-left: $padding;
     padding-right: $padding;
@@ -150,17 +224,17 @@ small,
 }
 
 @media screen and (min-width: 1366px) {
-  $padding: 22rem;
+  $padding: $containerPadding + 15%;
   .container {
     padding-left: $padding;
     padding-right: $padding;
   }
 }
 
-@media screen and (min-width: 1920px) {
-  $padding: 28rem;
-  .container {
-    padding-left: $padding;
-    padding-right: $padding;
-  }
-}
+// @media screen and (min-width: 1920px) {
+//   $padding: 28rem;
+//   .container {
+//     padding-left: $padding;
+//     padding-right: $padding;
+//   }
+// }

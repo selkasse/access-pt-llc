@@ -21,13 +21,14 @@ header {
   width: 100%;
   height: 5rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  padding: 3vw 2.5% 0 2.5%;
+  padding: 2vh 2.5% 0 2.5%;
 }
 header > h1 {
   margin-bottom: 0.1rem;
 }
 header > div {
   font-size: 87.5%;
+  color: #abd1c6;
 }
 header > nav {
   margin-top: 0.25rem;
@@ -50,10 +51,7 @@ header nav a + a {
   flex-direction: column;
 }
 
-.doctor-home {
-  text-align: center;
-}
-.doctor-home > img {
+#doc-pic > img {
   width: 100%;
 }
 
@@ -113,38 +111,95 @@ small,
   font-size: 0.8em;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 360px) {
+  header {
+    font-size: 56%;
+    height: 5.5rem;
+  }
+  header > div {
+    font-size: 89%;
+  }
+  header > nav a {
+    font-size: 165%;
+  }
+}
+@media screen and (min-width: 400px) {
+  header {
+    font-size: 62%;
+    height: 6.25rem;
+  }
+  header > nav a {
+    font-size: 168%;
+  }
+
   .container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
-    grid-template-areas: "image1 content1";
+    padding: 8.25rem 2.5%;
+  }
+}
+@media screen and (min-width: 450px) {
+  header {
+    font-size: 70%;
+    height: 7rem;
+  }
+  header > nav a {
+    font-size: 170%;
+  }
+
+  .container {
+    padding: 9rem 2.5%;
+  }
+}
+@media screen and (min-width: 780px) {
+  :root {
+    font-size: 132%;
+  }
+
+  header {
+    font-size: 78%;
+    height: 7.5rem;
+  }
+  header > nav a {
+    font-size: 171%;
+  }
+
+  .container {
+    padding: 10.5rem 2.5%;
   }
 
   .doctor-home {
-    grid-area: image1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
   }
 
-  .well-known {
-    grid-area: content1;
+  #dr-farouk {
+    align-self: flex-start;
+    margin-left: 20px;
+  }
+
+  #doc-pic {
+    width: 50%;
+  }
+  #doc-pic > img {
+    width: 100%;
+  }
+
+  h4 {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 @media screen and (min-width: 1024px) {
   .container {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
   }
 }
 @media screen and (min-width: 1366px) {
   .container {
-    padding-left: 22rem;
-    padding-right: 22rem;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .container {
-    padding-left: 28rem;
-    padding-right: 28rem;
+    padding-left: 17.5%;
+    padding-right: 17.5%;
   }
 }
 
