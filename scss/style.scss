@@ -129,9 +129,6 @@ small,
   header {
     font-size: $headerFontSize + 6%;
     height: $headerHeight + 0.5rem;
-    > div {
-      font-size: $sloganFontSize + 1.5%;
-    }
 
     > nav a {
       font-size: $navFontSize + 5%;
@@ -171,13 +168,14 @@ small,
   }
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 700px) {
   $offset: 2.5rem;
   :root {
     font-size: $baseFontSize + 20%;
   }
   header {
-    font-size: $headerFontSize + 28%;
+    height: $headerHeight - 1rem;
+    font-size: $headerFontSize + 13%;
     height: $headerHeight + $offset;
 
     > nav a {
@@ -199,7 +197,7 @@ small,
   #dr-farouk {
     align-self: flex-start;
     margin-left: 20px;
-    // width: 50%;
+    width: 50%;
   }
 
   #doc-pic {
