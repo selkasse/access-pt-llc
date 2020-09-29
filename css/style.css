@@ -49,6 +49,17 @@ header nav a + a {
   margin-left: 10px;
 }
 
+.splash-animation {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5%;
+  color: #fffffe;
+  font-size: 212%;
+}
+
 .container {
   padding: 6.5rem 2.5%;
   display: flex;
