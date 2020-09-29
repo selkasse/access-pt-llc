@@ -66,16 +66,64 @@ header {
   justify-content: center;
   align-items: center;
   padding: $containerPadding;
-  // align-content: center;
-  // padding-top: 25%;
-  // padding-bottom: 25%;
-  // padding-top: 50%;
-  // margin-bottom: 25%;
+
   color: $white;
   font-size: $baseFontSize + 100%;
-  // > p {
-  //   margin-top: 0;
-  // }
+  div > span > span {
+    opacity: 0;
+    animation: fadeInFromNone 3s forwards;
+  }
+}
+
+#people {
+  animation-delay: 0.5s;
+}
+#lives {
+  animation-delay: 1s;
+}
+#with {
+  animation-delay: 1.75s;
+}
+#dedication {
+  animation-delay: 2.25s;
+}
+#care {
+  animation-delay: 3s;
+}
+
+#excellence {
+  opacity: 0;
+  animation: moveUp 3s forwards;
+  animation-delay: 3s;
+  display: block;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100vh, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .container {
