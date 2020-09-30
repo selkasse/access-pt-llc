@@ -77,7 +77,7 @@ header {
     // line-height: 85%;
 
     opacity: 0;
-    animation: fadeInFromNone 5s forwards;
+    animation: fadeInFromNone 4.75s forwards;
   }
 }
 
@@ -89,39 +89,37 @@ header {
 #changing {
   line-height: 1;
 }
-
-#people {
+#lives {
   line-height: 1;
   animation-delay: 0.5s;
 }
-#lives {
-  line-height: 1;
-  animation-delay: 1s;
-}
 #with {
   line-height: 1;
-  animation-delay: 1.75s;
+  animation-delay: 1.2s;
 }
 #dedication {
   line-height: 1;
-  animation-delay: 2.25s;
+  animation-delay: 1.6s;
 }
 #care {
-  animation-delay: 3s;
+  animation-delay: 2.2s;
   line-height: 0.8;
 }
+#ampersand {
+  animation-delay: 2.6s;
+}
 #constant {
-  animation-delay: 3.5s;
+  animation-delay: 3.2s;
   line-height: 0.8;
 }
 
 #strides {
-  animation-delay: 4s;
+  animation-delay: 3.75s;
   line-height: 1.2;
 }
 
 #towards {
-  animation-delay: 4.5s;
+  animation-delay: 4.25s;
   line-height: 0.5;
 }
 
@@ -132,7 +130,7 @@ header {
   line-height: 1.4;
   opacity: 0;
   // animation: moveUp 3s forwards;
-  animation-delay: 5s;
+  animation-delay: 4.75s;
   // display: block;
 }
 
@@ -245,10 +243,24 @@ small,
 }
 //* -- END type-scale.com *******************************
 
-//* iPhone 11max
+//* iPhone 11 Pro max
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
   #excellence {
     line-height: 1.85;
+  }
+}
+
+//* iPhone 11
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+  #excellence {
+    line-height: 1.85;
+  }
+}
+
+//*  iPhone 11 Pro
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  #excellence {
+    line-height: 1.4;
   }
 }
 
