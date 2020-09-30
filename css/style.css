@@ -50,45 +50,67 @@ header nav a + a {
 }
 
 .splash-animation {
+  margin-top: 12vh;
+  line-height: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
   padding: 2.5%;
   color: #fffffe;
-  font-size: 212%;
+  font-size: 257%;
 }
 .splash-animation div > span > span {
   opacity: 0;
-  animation: fadeInFromNone 3s forwards;
+  animation: fadeInFromNone 5s forwards;
+}
+
+#changing {
+  line-height: 1;
 }
 
 #people {
+  line-height: 1;
   animation-delay: 0.5s;
 }
 
 #lives {
+  line-height: 1;
   animation-delay: 1s;
 }
 
 #with {
+  line-height: 1;
   animation-delay: 1.75s;
 }
 
 #dedication {
+  line-height: 1;
   animation-delay: 2.25s;
 }
 
 #care {
   animation-delay: 3s;
+  line-height: 0.8;
+}
+
+#constant {
+  animation-delay: 3.5s;
+  line-height: 0.8;
+}
+
+#strides {
+  animation-delay: 4s;
+  line-height: 1;
+}
+
+#towards {
+  animation-delay: 4.5s;
+  line-height: 0.5;
 }
 
 #excellence {
+  line-height: 1.2;
   opacity: 0;
-  animation: moveUp 3s forwards;
-  animation-delay: 3s;
-  display: block;
+  animation-delay: 5s;
 }
 
 @keyframes fadeInFromNone {
@@ -214,6 +236,11 @@ small,
 
   .container {
     padding: 7.75rem 2.5%;
+  }
+}
+@media screen and (min-width: 325px) {
+  .splash-animation {
+    font-size: 272%;
   }
 }
 @media screen and (min-width: 450px) {

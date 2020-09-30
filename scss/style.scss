@@ -60,42 +60,80 @@ header {
 }
 
 .splash-animation {
+  margin-top: 12vh;
+  // margin-bottom: 0;
+  // line-height: 90%;
+  line-height: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+  // height: 100vh;
+  // justify-content: center;
+  // align-items: center;
   padding: $containerPadding;
 
   color: $white;
-  font-size: $baseFontSize + 100%;
+  font-size: $baseFontSize + 145%;
   div > span > span {
+    // line-height: 85%;
+
     opacity: 0;
-    animation: fadeInFromNone 3s forwards;
+    animation: fadeInFromNone 5s forwards;
   }
 }
 
+.changing {
+  // margin-bottom: 0;
+  // padding-bottom: 0;
+}
+
+#changing {
+  line-height: 1;
+}
+
 #people {
+  line-height: 1;
   animation-delay: 0.5s;
 }
 #lives {
+  line-height: 1;
   animation-delay: 1s;
 }
 #with {
+  line-height: 1;
   animation-delay: 1.75s;
 }
 #dedication {
+  line-height: 1;
   animation-delay: 2.25s;
 }
 #care {
   animation-delay: 3s;
+  line-height: 0.8;
+}
+#constant {
+  animation-delay: 3.5s;
+  line-height: 0.8;
+}
+
+#strides {
+  animation-delay: 4s;
+  line-height: 1;
+}
+
+#towards {
+  animation-delay: 4.5s;
+  line-height: 0.5;
 }
 
 #excellence {
+  // padding-top: 1px;
+  // padding-top: 2px;
+  // padding-top: 0;
+  line-height: 1.2;
   opacity: 0;
-  animation: moveUp 3s forwards;
-  animation-delay: 3s;
-  display: block;
+  // animation: moveUp 3s forwards;
+  animation-delay: 5s;
+  // display: block;
 }
 
 @keyframes fadeInFromNone {
@@ -234,6 +272,12 @@ small,
 
   .container {
     padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .splash-animation {
+    font-size: $baseFontSize + 160%;
   }
 }
 
