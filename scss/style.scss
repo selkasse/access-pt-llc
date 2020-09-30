@@ -67,7 +67,7 @@ header {
   display: flex;
   flex-direction: column;
   // height: 100vh;
-  // justify-content: center;
+  justify-content: center;
   // align-items: center;
   padding: $containerPadding;
 
@@ -124,14 +124,26 @@ header {
 }
 
 #excellence {
-  // padding-top: 1px;
-  // padding-top: 2px;
-  // padding-top: 0;
   line-height: 1.4;
   opacity: 0;
-  // animation: moveUp 3s forwards;
   animation-delay: 4.75s;
-  // display: block;
+}
+
+#enter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#enter {
+  justify-self: flex-end;
+  display: flex;
+  // padding-top: 10vh;
+  height: 100%;
+  // flex-direction: column;
+  justify-content: center;
+  > a {
+    justify-self: center;
+  }
 }
 
 @keyframes fadeInFromNone {
@@ -332,6 +344,13 @@ small,
 
   .container {
     padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+
+  .splash-animation {
+    height: 100vh;
+    margin: 0;
+    padding-top: 12vh;
+    font-size: $baseFontSize + 250%;
   }
 }
 

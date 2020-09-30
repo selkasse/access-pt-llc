@@ -54,6 +54,7 @@ header nav a + a {
   line-height: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 2.5%;
   color: #fffffe;
   font-size: 257%;
@@ -110,6 +111,22 @@ header nav a + a {
   line-height: 1.4;
   opacity: 0;
   animation-delay: 4.75s;
+}
+
+#enter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#enter {
+  justify-self: flex-end;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+#enter > a {
+  justify-self: center;
 }
 
 @keyframes fadeInFromNone {
@@ -284,6 +301,13 @@ small,
 
   .container {
     padding: 9rem 2.5%;
+  }
+
+  .splash-animation {
+    height: 100vh;
+    margin: 0;
+    padding-top: 12vh;
+    font-size: 362%;
   }
 }
 @media screen and (min-width: 1024px) {
