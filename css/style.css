@@ -99,7 +99,7 @@ header nav a + a {
 
 #strides {
   animation-delay: 4s;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 #towards {
@@ -108,7 +108,7 @@ header nav a + a {
 }
 
 #excellence {
-  line-height: 1.2;
+  line-height: 1.4;
   opacity: 0;
   animation-delay: 5s;
 }
@@ -212,6 +212,11 @@ small,
   font-size: 0.8em;
 }
 
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  #excellence {
+    line-height: 1.85;
+  }
+}
 @media screen and (min-width: 360px) {
   header {
     font-size: 56%;

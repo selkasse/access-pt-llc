@@ -117,7 +117,7 @@ header {
 
 #strides {
   animation-delay: 4s;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 #towards {
@@ -129,7 +129,7 @@ header {
   // padding-top: 1px;
   // padding-top: 2px;
   // padding-top: 0;
-  line-height: 1.2;
+  line-height: 1.4;
   opacity: 0;
   // animation: moveUp 3s forwards;
   animation-delay: 5s;
@@ -244,6 +244,13 @@ small,
   font-size: 0.8em;
 }
 //* -- END type-scale.com *******************************
+
+//* iPhone 11max
+@media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+  #excellence {
+    line-height: 1.85;
+  }
+}
 
 @media screen and (min-width: 360px) {
   header {
