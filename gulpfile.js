@@ -1,6 +1,6 @@
 const postcss = require('gulp-postcss');
 const gulp = require('gulp');
-const autoprevixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
 
 gulp.task('serve', ['css'], function(){
     gulp.watch("./css/*.css", ['css']);

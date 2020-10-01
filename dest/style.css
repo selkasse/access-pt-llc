@@ -64,7 +64,8 @@ header nav a + a {
 }
 .splash-animation div > span > span {
   opacity: 0;
-  animation: fadeInFromNone 4.75s forwards;
+  -webkit-animation: fadeInFromNone 4.75s forwards;
+          animation: fadeInFromNone 4.75s forwards;
 }
 
 #changing {
@@ -73,47 +74,56 @@ header nav a + a {
 
 #lives {
   line-height: 1;
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 #with {
   line-height: 1;
-  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 #dedication {
   line-height: 1;
-  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 #care {
-  animation-delay: 2.2s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
   line-height: 0.8;
 }
 
 #ampersand {
-  animation-delay: 2.6s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 
 #constant {
-  animation-delay: 3.2s;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
   line-height: 0.8;
 }
 
 #strides {
-  animation-delay: 3.75s;
+  -webkit-animation-delay: 3.75s;
+          animation-delay: 3.75s;
   line-height: 1.2;
 }
 
 #towards {
-  animation-delay: 4.25s;
+  -webkit-animation-delay: 4.25s;
+          animation-delay: 4.25s;
   line-height: 0.5;
 }
 
 #excellence {
   line-height: 1.4;
   opacity: 0;
-  animation-delay: 4.75s;
+  -webkit-animation-delay: 4.75s;
+          animation-delay: 4.75s;
 }
 
 #enter-container {
@@ -123,8 +133,10 @@ header nav a + a {
   justify-content: center;
   align-items: flex-end;
   opacity: 0;
-  animation: fadeInFromNone 5s forwards;
-  animation-delay: 5.5s;
+  -webkit-animation: fadeInFromNone 5s forwards;
+          animation: fadeInFromNone 5s forwards;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
 }
 
 .enter {
@@ -139,10 +151,22 @@ header nav a + a {
 .enter-animated {
   display: block;
   background: linear-gradient(to right, #004643, #abd1c6, #f9bc60, #abd1c6, #004643);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
-  animation: glow 2s cubic-bezier(0.17, 0.67, 1, 0.45) infinite;
+  -webkit-animation: glow 2s cubic-bezier(0.17, 0.67, 1, 0.45) infinite;
+          animation: glow 2s cubic-bezier(0.17, 0.67, 1, 0.45) infinite;
   background-size: 400% 100%;
+}
+
+@-webkit-keyframes glow {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    display: flex;
+    background-position: 100% 0;
+  }
 }
 
 @keyframes glow {
@@ -152,6 +176,16 @@ header nav a + a {
   50% {
     display: flex;
     background-position: 100% 0;
+  }
+}
+@-webkit-keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
   }
 }
 @keyframes fadeInFromNone {
@@ -342,5 +376,3 @@ small,
     padding-right: 22.5%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

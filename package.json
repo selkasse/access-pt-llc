@@ -19,7 +19,9 @@
   "homepage": "https://github.com/selkasse/access-pt-llc#readme",
   "devDependencies": {
     "autoprefixer": "^10.0.1",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.0"
+    "gulp": "^3.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^9.0.0",
+    "postcss": "^8.1.1"
   }
 }
