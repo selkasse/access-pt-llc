@@ -60,7 +60,7 @@ header nav a + a {
   padding: 2.5%;
   overflow: hidden;
   color: #fffffe;
-  font-size: 257%;
+  font-size: 212%;
 }
 .splash-animation div > span > span {
   opacity: 0;
@@ -258,6 +258,11 @@ small,
     line-height: 1.6;
   }
 }
+@media screen and (min-width: 325px) {
+  .splash-animation {
+    font-size: 272%;
+  }
+}
 @media screen and (min-width: 360px) {
   header {
     font-size: 56%;
@@ -283,10 +288,9 @@ small,
   .container {
     padding: 7.75rem 2.5%;
   }
-}
-@media screen and (min-width: 325px) {
-  .splash-animation {
-    font-size: 272%;
+
+  .enter {
+    font-size: 462%;
   }
 }
 @media screen and (min-width: 450px) {
@@ -300,6 +304,11 @@ small,
 
   .container {
     padding: 8.5rem 2.5%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .enter {
+    font-size: 562%;
   }
 }
 @media screen and (min-width: 700px) {

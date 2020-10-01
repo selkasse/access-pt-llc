@@ -71,7 +71,7 @@ header {
   overflow: hidden;
 
   color: $white;
-  font-size: $baseFontSize + 145%;
+  font-size: $baseFontSize + 100%;
   div > span > span {
     opacity: 0;
     animation: fadeInFromNone 4.75s forwards;
@@ -128,9 +128,7 @@ header {
   justify-content: center;
   align-items: flex-end;
   opacity: 0;
-  // @include animation("fadeInFromNone 5s forwards");
   animation: fadeInFromNone 5s forwards;
-  // -webkit-animation: fadeInFromNone 5s forwards;
   animation-delay: 5.5s;
 }
 .enter {
@@ -290,6 +288,12 @@ small,
   }
 }
 
+@media screen and (min-width: 325px) {
+  .splash-animation {
+    font-size: $baseFontSize + 160%;
+  }
+}
+
 @media screen and (min-width: 360px) {
   header {
     font-size: $headerFontSize + 6%;
@@ -318,11 +322,9 @@ small,
   .container {
     padding: ($headerHeight + 2rem + $offset) $containerPadding;
   }
-}
 
-@media screen and (min-width: 325px) {
-  .splash-animation {
-    font-size: $baseFontSize + 160%;
+  .enter {
+    font-size: $baseFontSize + 350%;
   }
 }
 
@@ -339,6 +341,12 @@ small,
 
   .container {
     padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .enter {
+    font-size: $baseFontSize + 450%;
   }
 }
 
@@ -363,7 +371,6 @@ small,
   .splash-animation {
     height: 100vh;
     margin: 0;
-    // padding-top: 12vh;
     font-size: $baseFontSize + 250%;
   }
 }
