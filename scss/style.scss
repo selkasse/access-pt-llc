@@ -124,15 +124,18 @@ header {
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  animation: fadeInFromNone 3s forwards;
+  // @include animation("fadeInFromNone 5s forwards");
+  animation: fadeInFromNone 5s forwards;
+  // -webkit-animation: fadeInFromNone 5s forwards;
   animation-delay: 5.5s;
 }
 .enter {
   line-height: 1;
   margin-bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   text-decoration: none;
+  font-size: $baseFontSize - 40%;
 }
 
 .enter-animated {
@@ -145,9 +148,20 @@ header {
     $green
   );
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   background-clip: text;
+
+  -webkit-color: transparent;
+  -moz-color: transparent;
   color: transparent;
-  animation: glow 3s cubic-bezier(0.41, -0.4, 0.19, 0.87) infinite;
+
+  -webkit-animation: glow 2s cubic-bezier(0.17, 0.67, 1, 0.45) infinite;
+  -moz-animation: glow 2s cubic-bezier(0.17, 0.67, 1, 0.45) infinite;
+  animation: glow 2s cubic-bezier(0.17, 0.67, 1, 0.45) infinite;
+
+  // cubic-bezier(0.41, -0.4, 0.19, 0.87)
+  -webkit-background-size: 400% 100%;
+  -moz-background-size: 400% 100%;
   background-size: 400% 100%;
 }
 
@@ -155,40 +169,71 @@ header {
   0%,
   100% {
     background-position: 0 0;
+    // webkit-background-position: 0 0;
   }
 
   50% {
     background-position: 100% 0;
+    // webkit-background-position: 100% 0;
   }
 }
+
+// @-webkit-keyframes glow {
+//   0%,
+//   100% {
+//     background-position: 0 0;
+//   }
+
+//   50% {
+//     background-position: 100% 0;
+//   }
+// }
+
+// @-moz-keyframes glow {
+//   0%,
+//   100% {
+//     background-position: 0 0;
+//     // webkit-background-position: 0 0;
+//   }
+
+//   50% {
+//     background-position: 100% 0;
+//     // webkit-background-position: 100% 0;
+//   }
+// }
 
 @keyframes fadeInFromNone {
   0% {
     display: none;
     opacity: 0;
   }
-
-  1% {
-    display: block;
-    opacity: 0;
-  }
-
   100% {
     display: block;
     opacity: 1;
   }
 }
 
-@keyframes moveUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100vh, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
+// @-webkit-keyframes fadeInFromNone {
+//   0% {
+//     display: none;
+//     opacity: 0;
+//   }
+//   100% {
+//     display: block;
+//     opacity: 1;
+//   }
+// }
+
+// @-moz-keyframes fadeInFromNone {
+//   0% {
+//     display: none;
+//     opacity: 0;
+//   }
+//   100% {
+//     display: block;
+//     opacity: 1;
+//   }
+// }
 
 .container {
   padding: ($headerHeight + 2rem) $containerPadding;
@@ -288,7 +333,7 @@ small,
 //*  iPhone 11 Pro
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
   #excellence {
-    line-height: 1.4;
+    line-height: 1.6;
   }
 }
 

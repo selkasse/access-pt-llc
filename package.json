@@ -1,0 +1,25 @@
+{
+  "name": "access-pt-llc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selkasse/access-pt-llc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selkasse/access-pt-llc/issues"
+  },
+  "homepage": "https://github.com/selkasse/access-pt-llc#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0"
+  }
+}
