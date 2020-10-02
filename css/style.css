@@ -59,7 +59,7 @@ header nav a + a {
   padding: 2.5%;
   overflow: hidden;
   color: #fffffe;
-  font-size: 262%;
+  font-size: 15vw;
 }
 .splash-animation div > span > span {
   opacity: 0;
@@ -67,7 +67,7 @@ header nav a + a {
 }
 
 #animation {
-  margin-top: 15vh;
+  margin-top: 16vh;
 }
 
 #changing {
@@ -91,7 +91,7 @@ header nav a + a {
 
 #care {
   animation-delay: 2.2s;
-  line-height: 0.8;
+  line-height: 0.9;
 }
 
 #ampersand {
@@ -100,7 +100,7 @@ header nav a + a {
 
 #constant {
   animation-delay: 3.2s;
-  line-height: 0.8;
+  line-height: 0.7;
 }
 
 #strides {
@@ -120,11 +120,10 @@ header nav a + a {
 }
 
 #enter-container {
-  height: 25vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  margin-top: -6vh;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   opacity: 0;
   animation: fadeInFromNone 5s forwards;
   animation-delay: 5.5s;
@@ -133,14 +132,14 @@ header nav a + a {
 .enter {
   line-height: 1;
   margin-bottom: 0;
-  display: flex;
-  justify-content: flex-end;
   text-decoration: none;
-  font-size: 312%;
+  font-size: 212%;
 }
 
 .enter-animated {
-  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  grid-column-start: 3;
   background-clip: text;
   animation: blink 1.45s infinite;
 }
@@ -275,11 +274,6 @@ small,
     line-height: 1.6;
   }
 }
-@media screen and (min-width: 325px) {
-  .splash-animation {
-    font-size: 272%;
-  }
-}
 @media screen and (min-width: 360px) {
   header {
     font-size: 56%;
@@ -305,10 +299,6 @@ small,
   .container {
     padding: 7.75rem 2.5%;
   }
-
-  .enter {
-    font-size: 462%;
-  }
 }
 @media screen and (min-width: 450px) {
   header {
@@ -323,9 +313,9 @@ small,
     padding: 8.5rem 2.5%;
   }
 }
-@media screen and (min-width: 600px) {
-  .enter {
-    font-size: 562%;
+@media screen and (min-width: 500px) {
+  .splash-animation {
+    font-size: 14vw;
   }
 }
 @media screen and (min-width: 700px) {
@@ -347,7 +337,6 @@ small,
   .splash-animation {
     height: 100vh;
     margin: 0;
-    font-size: 362%;
   }
 }
 @media screen and (min-width: 1024px) {

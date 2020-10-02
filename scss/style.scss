@@ -49,7 +49,6 @@ header {
     font-size: $navFontSize;
     color: $yellow;
     text-decoration: none;
-    // padding-bottom: 1vh;
   }
   nav a:hover {
     border-bottom: solid 2px $lightGreen;
@@ -70,7 +69,8 @@ header {
   overflow: hidden;
 
   color: $white;
-  font-size: $baseFontSize + 150%;
+  // font-size: $baseFontSize + 160%;
+  font-size: 15vw;
   div > span > span {
     opacity: 0;
     animation: fadeInFromNone 4.75s forwards;
@@ -78,7 +78,7 @@ header {
 }
 
 #animation {
-  margin-top: 15vh;
+  margin-top: 16vh;
 }
 
 #changing {
@@ -98,14 +98,14 @@ header {
 }
 #care {
   animation-delay: 2.2s;
-  line-height: 0.8;
+  line-height: 0.9;
 }
 #ampersand {
   animation-delay: 2.6s;
 }
 #constant {
   animation-delay: 3.2s;
-  line-height: 0.8;
+  line-height: 0.7;
 }
 
 #strides {
@@ -125,11 +125,11 @@ header {
 }
 
 #enter-container {
-  height: 25vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  margin-top: -6vh;
+  // padding-top: 0;
+  height: 35vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   opacity: 0;
   animation: fadeInFromNone 5s forwards;
   animation-delay: 5.5s;
@@ -137,17 +137,18 @@ header {
 .enter {
   line-height: 1;
   margin-bottom: 0;
-  display: flex;
-  justify-content: flex-end;
+
   text-decoration: none;
-  font-size: $baseFontSize + 200%;
+  font-size: $baseFontSize + 100%;
 }
 
 .enter-animated {
-  display: block;
+  padding-top: 0;
+  margin-top: 0;
+  grid-column-start: 3;
+  // display: block;
 
   background-clip: text;
-
   animation: blink 1.45s infinite;
 }
 
@@ -299,7 +300,7 @@ small,
 
 @media screen and (min-width: 325px) {
   .splash-animation {
-    font-size: $baseFontSize + 160%;
+    // font-size: $baseFontSize + 160%;
   }
 }
 
@@ -333,7 +334,7 @@ small,
   }
 
   .enter {
-    font-size: $baseFontSize + 350%;
+    // font-size: $baseFontSize + 350%;
   }
 }
 
@@ -353,9 +354,9 @@ small,
   }
 }
 
-@media screen and (min-width: 600px) {
-  .enter {
-    font-size: $baseFontSize + 450%;
+@media screen and (min-width: 500px) {
+  .splash-animation {
+    font-size: 14vw;
   }
 }
 
@@ -380,7 +381,7 @@ small,
   .splash-animation {
     height: 100vh;
     margin: 0;
-    font-size: $baseFontSize + 250%;
+    // font-size: $baseFontSize + 250%;
   }
 }
 
