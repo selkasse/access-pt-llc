@@ -61,8 +61,7 @@ header {
 
 .splash-animation {
   height: 100vh;
-  padding-top: 5vh;
-  margin-top: 0;
+  margin: 0;
   line-height: 0;
   display: flex;
   flex-direction: column;
@@ -71,11 +70,15 @@ header {
   overflow: hidden;
 
   color: $white;
-  font-size: $baseFontSize + 100%;
+  font-size: $baseFontSize + 150%;
   div > span > span {
     opacity: 0;
     animation: fadeInFromNone 4.75s forwards;
   }
+}
+
+#animation {
+  margin-top: 15vh;
 }
 
 #changing {
@@ -137,27 +140,33 @@ header {
   display: flex;
   justify-content: flex-end;
   text-decoration: none;
-  font-size: $baseFontSize + 300%;
+  font-size: $baseFontSize + 200%;
 }
 
 .enter-animated {
   display: block;
-  background: linear-gradient(
-    to right,
-    $green,
-    $lightGreen,
-    $yellow,
-    $lightGreen,
-    $green
-  );
 
   background-clip: text;
 
-  color: transparent;
+  animation: blink 1.45s infinite;
+}
 
-  animation: glow 2s cubic-bezier(0.17, 0.67, 1, 0.45) infinite;
-
-  background-size: 400% 100%;
+@keyframes blink {
+  0% {
+    color: $yellow;
+  }
+  49% {
+    color: $yellow;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: $yellow;
+  }
 }
 
 @keyframes glow {
