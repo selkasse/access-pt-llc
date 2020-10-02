@@ -1,4 +1,5 @@
 @import "config";
+// @import "mediaqueries";
 
 * {
   box-sizing: border-box;
@@ -274,7 +275,7 @@ small,
 }
 //* -- END type-scale.com *******************************
 
-//* iPhone 11 Pro max
+// //* iPhone 11 Pro max
 @media only screen and (device-width: 414px) and (device-height: 896px) {
   #excellence {
     line-height: 1.85;
@@ -381,7 +382,6 @@ small,
   .splash-animation {
     height: 100vh;
     margin: 0;
-    // font-size: $baseFontSize + 250%;
   }
 }
 
@@ -393,11 +393,35 @@ small,
   }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1280px) {
   $padding: $containerPadding + 15%;
   .container {
     padding-left: $padding;
     padding-right: $padding;
+  }
+
+  .splash-animation {
+    font-size: $baseFontSize + 350%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #animation {
+    margin-top: 0;
+  }
+  #enter-container {
+    margin-top: 50vh;
+  }
+}
+
+@media screen and (min-width: 1440) {
+  .splash-animation {
+    font-size: $baseFontSize + 450%;
+  }
+}
+
+@media screen and (min-width: 1680) {
+  .splash-animation {
+    font-size: $baseFontSize + 500%;
   }
 }
 

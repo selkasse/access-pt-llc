@@ -396,10 +396,34 @@ small,
     padding-right: 12.5%;
   }
 }
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1280px) {
   .container {
     padding-left: 17.5%;
     padding-right: 17.5%;
+  }
+
+  .splash-animation {
+    font-size: 462%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #animation {
+    margin-top: 0;
+  }
+
+  #enter-container {
+    margin-top: 50vh;
+  }
+}
+@media screen and (min-width: 1440) {
+  .splash-animation {
+    font-size: 562%;
+  }
+}
+@media screen and (min-width: 1680) {
+  .splash-animation {
+    font-size: 612%;
   }
 }
 @media screen and (min-width: 1920px) {

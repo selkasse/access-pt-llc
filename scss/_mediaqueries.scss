@@ -1,0 +1,109 @@
+//* iPhone 11 Pro max
+@media only screen and (device-width: 414px) and (device-height: 896px) {
+  #excellence {
+    line-height: 1.85;
+  }
+  .splash-animation {
+    margin-top: 0;
+  }
+}
+
+//* iPhone 11
+@media only screen and (device-width: 414px) and (device-height: 896px) {
+  #excellence {
+    line-height: 1.85;
+  }
+}
+
+//*  iPhone 11 Pro
+@media only screen and (device-width: 375px) and (device-height: 812px) {
+  #excellence {
+    line-height: 1.6;
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .splash-animation {
+    // font-size: $baseFontSize + 160%;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  header {
+    font-size: $headerFontSize + 6%;
+    height: $headerHeight + 0.5rem;
+
+    > nav a {
+      font-size: $navFontSize + 5%;
+    }
+  }
+  h4 {
+    font-size: 1.53em;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  $offset: 1.25rem;
+  header {
+    font-size: $headerFontSize + 12%;
+    height: $headerHeight + $offset;
+
+    > nav a {
+      font-size: $navFontSize + 8%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+
+  .enter {
+    // font-size: $baseFontSize + 350%;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  $offset: 2rem;
+  header {
+    font-size: $headerFontSize + 20%;
+    height: $headerHeight + $offset;
+
+    > nav a {
+      font-size: $navFontSize + 10%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .splash-animation {
+    font-size: 14vw;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  $offset: 2.5rem;
+
+  header {
+    font-size: $headerFontSize + 25%;
+    height: $headerHeight + $offset;
+    > blockquote {
+      font-size: $sloganFontSize + 25%;
+    }
+    > nav a {
+      font-size: $navFontSize + 11%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+
+  .splash-animation {
+    height: 100vh;
+    margin: 0;
+  }
+}
