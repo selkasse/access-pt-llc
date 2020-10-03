@@ -93,10 +93,15 @@ header {
     margin-top: 14vh;
     font-size: $baseFontSize - 85%;
 
-    @include media("handheld", ">=tablet") {
-      margin-top: 1vh;
-      font-size: 8vw;
-    }
+    // @include media("handheld", ">=tablet") {
+    //   margin-top: 1vh;
+    //   font-size: 8vw;
+    // }
+  }
+
+  @include media("Nexus7") {
+    // background-color: black;
+    margin-top: 5vh;
   }
 }
 
@@ -170,6 +175,12 @@ header {
     height: auto;
     flex-direction: column;
     justify-content: center;
+  }
+  @include media("landscape", "Nexus7") {
+    // background-color: black;
+    // margin-top: -6vh;
+    justify-content: flex-start;
+    margin-right: 0;
   }
 }
 .enter {
@@ -470,5 +481,18 @@ small,
   .container {
     padding-left: $padding;
     padding-right: $padding;
+  }
+}
+
+// @media (min-aspect-ratio: 1.45) {
+//   #animation {
+//     background-color: black;
+//   }
+// }
+
+@media (min-aspect-ratio: 4/3) and (max-aspect-ratio: 8/5) {
+  #animation {
+    padding-top: 12vh;
+    // background-color: black;
   }
 }

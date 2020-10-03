@@ -29,9 +29,9 @@
 ///  $breakpoints: ('phone': 320px);
 ///
 $breakpoints: (
-  'phone': 320px,
-  'tablet': 768px,
-  'desktop': 1024px
+  "phone": 320px,
+  "tablet": 768px,
+  "desktop": 1024px,
 ) !default;
 
 ///
@@ -60,6 +60,7 @@ $media-expressions: (
   "iPhone11ProMax": "(device-width: 414px) and (device-height: 896px)",
   "Pixel3XL": "(device-width: 412px) and (device-height: 847px)",
   "GalaxyS9Plus": "(device-width: 412px) and (device-height: 846px)",
+  "Nexus7": "(device-width: 600px) and (device-height: 960px)",
 ) !default;
 
 ///

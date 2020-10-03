@@ -86,10 +86,9 @@ header nav a + a {
     font-size: 27%;
   }
 }
-@media handheld and (orientation: landscape) and (min-width: 768px) {
+@media (device-width: 600px) and (device-height: 960px) {
   #animation {
-    margin-top: 1vh;
-    font-size: 8vw;
+    margin-top: 5vh;
   }
 }
 
@@ -164,6 +163,12 @@ header nav a + a {
     height: auto;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media (orientation: landscape) and (device-width: 600px) and (device-height: 960px) {
+  #enter-container {
+    justify-content: flex-start;
+    margin-right: 0;
   }
 }
 
@@ -365,6 +370,11 @@ small,
   .container {
     padding-left: 22.5%;
     padding-right: 22.5%;
+  }
+}
+@media (min-aspect-ratio: 4/3) and (max-aspect-ratio: 8/5) {
+  #animation {
+    padding-top: 12vh;
   }
 }
 
