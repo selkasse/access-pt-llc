@@ -73,7 +73,7 @@ header nav a + a {
 }
 
 #animation {
-  margin-top: 10vh;
+  margin-top: 6vh;
 }
 @media (min-width: 768px) {
   #animation {
@@ -123,17 +123,17 @@ header nav a + a {
 
 #constant {
   animation-delay: 3.2s;
-  line-height: 0.7;
+  line-height: 0.8;
 }
 
 #strides {
   animation-delay: 3.75s;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 #towards {
   animation-delay: 4.25s;
-  line-height: 0.5;
+  line-height: 0.7;
 }
 
 #excellence {
@@ -150,7 +150,7 @@ header nav a + a {
 #enter-container {
   height: 35vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   opacity: 0;
   animation: fadeInFromNone 5s forwards;
@@ -161,6 +161,9 @@ header nav a + a {
     padding-top: 0;
     margin-top: 12vh;
     margin-right: 5vw;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -168,6 +171,7 @@ header nav a + a {
   line-height: 1;
   margin-bottom: 0;
   text-decoration: none;
+  color: #f9bc60;
   font-size: 212%;
 }
 
@@ -176,7 +180,7 @@ header nav a + a {
   margin-top: 0;
   grid-column-start: 3;
   background-clip: text;
-  animation: blink 1.45s infinite;
+  animation: fadeInFromNone 2s;
 }
 
 @keyframes blink {
@@ -290,11 +294,6 @@ small,
   font-size: 0.8em;
 }
 
-@media only screen and (device-width: 414px) and (device-height: 896px) {
-  .splash-animation {
-    margin-top: 0;
-  }
-}
 @media screen and (min-width: 360px) {
   header {
     font-size: 56%;

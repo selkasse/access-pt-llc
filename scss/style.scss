@@ -85,7 +85,7 @@ header {
 }
 
 #animation {
-  margin-top: 10vh;
+  margin-top: 6vh;
   @include media(">=tablet") {
     font-size: 12vw;
   }
@@ -124,17 +124,17 @@ header {
 }
 #constant {
   animation-delay: 3.2s;
-  line-height: 0.7;
+  line-height: 0.8;
 }
 
 #strides {
   animation-delay: 3.75s;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 #towards {
   animation-delay: 4.25s;
-  line-height: 0.5;
+  line-height: 0.7;
 }
 
 #excellence {
@@ -156,7 +156,7 @@ header {
   // display: grid;
   // grid-template-columns: repeat(5, 1fr);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   opacity: 0;
   animation: fadeInFromNone 5s forwards;
@@ -167,9 +167,9 @@ header {
     margin-top: 12vh;
     margin-right: 5vw;
 
-    // height: auto;
-    // flex-direction: column;
-    // justify-content: center;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .enter {
@@ -177,6 +177,7 @@ header {
   margin-bottom: 0;
 
   text-decoration: none;
+  color: $yellow;
   font-size: $baseFontSize + 100%;
 }
 
@@ -187,7 +188,8 @@ header {
   // display: block;
 
   background-clip: text;
-  animation: blink 1.45s infinite;
+  animation: fadeInFromNone 2s;
+  // animation: blink 1.45s infinite;
 }
 
 @keyframes blink {
@@ -318,7 +320,7 @@ small,
     // line-height: 1.85;
   }
   .splash-animation {
-    margin-top: 0;
+    // margin-top: 0;
   }
 }
 
