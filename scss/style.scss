@@ -82,6 +82,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
   }
+
+  // @include media(">=tablet") {
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  // }
 }
 
 #animation {
@@ -90,7 +95,8 @@ header {
     font-size: 12vw;
   }
   @include media("landscape") {
-    margin-top: 14vh;
+    // margin-top: 14vh;
+    margin-top: 0;
     font-size: $baseFontSize - 85%;
 
     // @include media("handheld", ">=tablet") {
@@ -169,12 +175,13 @@ header {
 
   @include media("landscape") {
     padding-top: 0;
-    margin-top: 12vh;
+    // margin-top: 12vh;
+    margin-top: 0;
     margin-right: 5vw;
 
     height: auto;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
   @include media("landscape", "Nexus7") {
     // background-color: black;
