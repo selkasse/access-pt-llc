@@ -1,5 +1,5 @@
 @import "config";
-// @import "mediaqueries";
+@import "mediaqueries";
 
 * {
   box-sizing: border-box;
@@ -71,15 +71,33 @@ header {
 
   color: $white;
   // font-size: $baseFontSize + 160%;
-  font-size: 15vw;
+  font-size: 14vw;
+
   div > span > span {
     opacity: 0;
     animation: fadeInFromNone 4.75s forwards;
   }
+
+  @include media("landscape") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 #animation {
-  margin-top: 16vh;
+  margin-top: 10vh;
+  @include media(">=tablet") {
+    font-size: 12vw;
+  }
+  @include media("landscape") {
+    margin-top: 14vh;
+    font-size: $baseFontSize - 85%;
+
+    @include media("handheld", ">=tablet") {
+      margin-top: 1vh;
+      font-size: 8vw;
+    }
+  }
 }
 
 #changing {
@@ -123,17 +141,36 @@ header {
   line-height: 1.4;
   opacity: 0;
   animation-delay: 4.75s;
+
+  @include media("iPhone11") {
+    // margin-top: -2vh;
+    line-height: 1.3;
+    // background-color: black;
+  }
 }
 
 #enter-container {
-  margin-top: -6vh;
+  // margin-top: -2vh;
   // padding-top: 0;
   height: 35vh;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   opacity: 0;
   animation: fadeInFromNone 5s forwards;
   animation-delay: 5.5s;
+
+  @include media("landscape") {
+    padding-top: 0;
+    margin-top: 12vh;
+    margin-right: 5vw;
+
+    // height: auto;
+    // flex-direction: column;
+    // justify-content: center;
+  }
 }
 .enter {
   line-height: 1;
@@ -278,24 +315,24 @@ small,
 // //* iPhone 11 Pro max
 @media only screen and (device-width: 414px) and (device-height: 896px) {
   #excellence {
-    line-height: 1.85;
+    // line-height: 1.85;
   }
   .splash-animation {
     margin-top: 0;
   }
 }
 
-//* iPhone 11
-@media only screen and (device-width: 414px) and (device-height: 896px) {
-  #excellence {
-    line-height: 1.85;
-  }
-}
+// //* iPhone 11
+// @media only screen and (device-width: 414px) and (device-height: 896px) {
+//   #excellence {
+//     line-height: 1.85;
+//   }
+// }
 
 //*  iPhone 11 Pro
 @media only screen and (device-width: 375px) and (device-height: 812px) {
   #excellence {
-    line-height: 1.6;
+    // line-height: 1.6;
   }
 }
 
@@ -357,7 +394,7 @@ small,
 
 @media screen and (min-width: 500px) {
   .splash-animation {
-    font-size: 14vw;
+    // font-size: 14vw;
   }
 }
 
@@ -380,8 +417,8 @@ small,
   }
 
   .splash-animation {
-    height: 100vh;
-    margin: 0;
+    // height: 100vh;
+    // margin: 0;
   }
 }
 
@@ -400,30 +437,30 @@ small,
     padding-right: $padding;
   }
 
-  .splash-animation {
-    font-size: $baseFontSize + 350%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #animation {
-    margin-top: 0;
-  }
-  #enter-container {
-    margin-top: 50vh;
-  }
+  // .splash-animation {
+  //   font-size: $baseFontSize + 350%;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  // }
+  // #animation {
+  //   margin-top: 0;
+  // }
+  // #enter-container {
+  //   margin-top: 50vh;
+  // }
 }
 
-@media screen and (min-width: 1440) {
-  .splash-animation {
-    font-size: $baseFontSize + 450%;
-  }
-}
+// @media screen and (min-width: 1440) {
+//   .splash-animation {
+//     font-size: $baseFontSize + 450%;
+//   }
+// }
 
-@media screen and (min-width: 1680) {
-  .splash-animation {
-    font-size: $baseFontSize + 500%;
-  }
-}
+// @media screen and (min-width: 1680) {
+//   .splash-animation {
+//     font-size: $baseFontSize + 500%;
+//   }
+// }
 
 @media screen and (min-width: 1920px) {
   $padding: $containerPadding + 20%;
