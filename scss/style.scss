@@ -96,7 +96,7 @@ header {
   }
 
   @include media("portrait", "iPhone11ProMax") {
-    margin-top: 20vh;
+    margin-top: 0;
   }
 }
 

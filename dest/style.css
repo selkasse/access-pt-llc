@@ -94,7 +94,7 @@ header nav a + a {
 }
 @media (orientation: portrait) and (device-width: 414px) and (device-height: 896px) {
   #animation {
-    margin-top: 20vh;
+    margin-top: 0;
   }
 }
 
