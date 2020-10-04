@@ -100,7 +100,7 @@ header {
     margin-top: 5vh;
   }
 
-  @include media("portrait", "iPhone11ProMax") {
+  @include media("portrait") {
     margin-top: 0;
   }
 }
@@ -170,6 +170,11 @@ header {
     height: auto;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  @include media("portrait") {
+    align-items: flex-start;
+    padding-top: 4vh;
   }
   @include media("landscape", "Nexus7") {
     justify-content: flex-start;
