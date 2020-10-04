@@ -87,7 +87,6 @@ header {
     font-size: 10vw;
   }
   @include media("landscape") {
-    // margin-top: 14vh;
     margin-top: 0;
     font-size: $baseFontSize - 85%;
   }
