@@ -96,7 +96,7 @@ header nav a + a {
     margin-top: 5vh;
   }
 }
-@media (orientation: portrait) and (device-width: 414px) and (device-height: 896px) {
+@media (orientation: portrait) {
   #animation {
     margin-top: 0;
   }
@@ -173,6 +173,12 @@ header nav a + a {
     height: auto;
     flex-direction: column;
     justify-content: flex-start;
+  }
+}
+@media (orientation: portrait) {
+  #enter-container {
+    align-items: flex-start;
+    padding-top: 4vh;
   }
 }
 @media (orientation: landscape) and (device-width: 600px) and (device-height: 960px) {
