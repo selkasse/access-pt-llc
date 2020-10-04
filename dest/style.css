@@ -78,7 +78,7 @@ header nav a + a {
 }
 @media (min-width: 768px) {
   #animation {
-    font-size: 12vw;
+    font-size: 10vw;
   }
 }
 @media (orientation: landscape) {
@@ -202,59 +202,6 @@ header nav a + a {
           animation: fadeInFromNone 2s;
 }
 
-@-webkit-keyframes blink {
-  0% {
-    color: #f9bc60;
-  }
-  49% {
-    color: #f9bc60;
-  }
-  60% {
-    color: transparent;
-  }
-  99% {
-    color: transparent;
-  }
-  100% {
-    color: #f9bc60;
-  }
-}
-
-@keyframes blink {
-  0% {
-    color: #f9bc60;
-  }
-  49% {
-    color: #f9bc60;
-  }
-  60% {
-    color: transparent;
-  }
-  99% {
-    color: transparent;
-  }
-  100% {
-    color: #f9bc60;
-  }
-}
-@-webkit-keyframes glow {
-  0%, 100% {
-    background-position: 0 0;
-  }
-  50% {
-    display: flex;
-    background-position: 100% 0;
-  }
-}
-@keyframes glow {
-  0%, 100% {
-    background-position: 0 0;
-  }
-  50% {
-    display: flex;
-    background-position: 100% 0;
-  }
-}
 @-webkit-keyframes fadeInFromNone {
   0% {
     display: none;
@@ -265,6 +212,7 @@ header nav a + a {
     opacity: 1;
   }
 }
+
 @keyframes fadeInFromNone {
   0% {
     display: none;
@@ -430,5 +378,10 @@ small,
 
   #enter-container {
     padding-top: 12vh;
+  }
+}
+@media (min-width: 650px) and (max-width: 972px) and (min-height: 500px) and (orientation: portrait) {
+  .splash-animation {
+    font-size: 6vw;
   }
 }
