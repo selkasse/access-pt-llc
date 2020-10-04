@@ -94,6 +94,10 @@ header {
   @include media("Nexus7") {
     margin-top: 5vh;
   }
+
+  @include media("portrait", "iPhone11ProMax") {
+    margin-top: 20vh;
+  }
 }
 
 #changing {
@@ -380,3 +384,4 @@ small,
     font-size: 6vw;
   }
 }
+// add arbitrary comment to test live reload
