@@ -33,11 +33,7 @@ header {
   > h1 {
     margin-bottom: 0.1rem;
   }
-  > blockquote {
-    align-self: stretch;
-    text-align: center;
-    font-size: $sloganFontSize;
-  }
+
   > div {
     font-size: $sloganFontSize;
     color: $lightGreen;
@@ -56,6 +52,34 @@ header {
   nav a + a {
     margin-left: 10px;
   }
+}
+
+footer {
+  background: $lightGreen;
+  color: $white;
+  // padding: 2rem var(--containerPadding);
+  text-align: center;
+  > nav a {
+    color: $green;
+    text-decoration: none;
+    font-size: $baseFontSize;
+    @include media("portrait") {
+      font-size: $baseFontSize - 25%;
+    }
+  }
+  nav a + a {
+    margin-left: 1vw;
+  }
+  nav a:hover {
+    border-bottom: solid 2px $green;
+  }
+}
+
+footer p {
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: none;
 }
 
 .home {
@@ -214,7 +238,7 @@ header {
   padding: ($headerHeight + 2rem) $containerPadding;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  // height: 100vh;
 }
 
 .doc-pic {
