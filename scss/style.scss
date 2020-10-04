@@ -99,6 +99,10 @@ header {
   @include media("Nexus7") {
     margin-top: 5vh;
   }
+
+  @include media("portrait", "iPhone11ProMax") {
+    margin-top: 0;
+  }
 }
 
 #changing {
@@ -385,5 +389,4 @@ small,
     font-size: 6vw;
   }
 }
-
-// add arbitrary comment to try merge again
+// add arbitrary comment to test live reload
