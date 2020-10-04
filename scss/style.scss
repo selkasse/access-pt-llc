@@ -218,6 +218,17 @@ header {
   }
 }
 
+a[href^="tel"] {
+  text-decoration: none;
+  color: $lightGreen;
+  pointer-events: none;
+}
+
+#phone a[href^="tel"] {
+  color: $yellow;
+  pointer-events: auto;
+}
+
 blockquote {
   margin: 0;
   padding: 0;

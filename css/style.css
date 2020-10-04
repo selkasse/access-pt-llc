@@ -219,6 +219,17 @@ header nav a + a {
   width: 100%;
 }
 
+a[href^=tel] {
+  text-decoration: none;
+  color: #abd1c6;
+  pointer-events: none;
+}
+
+#phone a[href^=tel] {
+  color: #f9bc60;
+  pointer-events: auto;
+}
+
 blockquote {
   margin: 0;
   padding: 0;
