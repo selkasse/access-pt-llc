@@ -17,6 +17,7 @@
 }
 
 header {
+  padding-top: 2vh;
   background: $headerBackground;
   font-size: $headerFontSize;
   color: $white;
@@ -55,6 +56,10 @@ header {
   nav a + a {
     margin-left: 10px;
   }
+}
+
+.home {
+  height: 100vh;
 }
 
 .splash-animation {

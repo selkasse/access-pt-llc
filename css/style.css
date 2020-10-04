@@ -9,6 +9,7 @@
 }
 
 header {
+  padding-top: 2vh;
   background: #004643;
   font-size: 50%;
   color: #fffffe;
@@ -47,6 +48,10 @@ header nav a:hover {
 }
 header nav a + a {
   margin-left: 10px;
+}
+
+.home {
+  height: 100vh;
 }
 
 .splash-animation {
