@@ -238,6 +238,12 @@ blockquote {
   box-shadow: $level-3;
   color: $green;
   border-radius: 10px;
+  > h4 {
+    margin-top: 0;
+  }
+  > a {
+    color: $white;
+  }
 }
 
 .quote-author {

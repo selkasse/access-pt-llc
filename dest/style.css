@@ -230,6 +230,12 @@ blockquote {
   color: #004643;
   border-radius: 10px;
 }
+.card > h4 {
+  margin-top: 0;
+}
+.card > a {
+  color: #fffffe;
+}
 
 .quote-author {
   color: #fffffe;
