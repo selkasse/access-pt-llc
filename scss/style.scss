@@ -214,6 +214,20 @@ blockquote {
   box-shadow: $level-3;
 }
 
+.photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  > img {
+    box-shadow: $level-4;
+    // outline: 1px solid $lightGreen;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
 .card {
   padding: 2em;
   background: $lightGreen;
@@ -388,6 +402,18 @@ small,
 
   .container {
     padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .photos {
+    flex-direction: row;
+    > img {
+      width: 33%;
+    }
+    img + img {
+      margin-left: 10px;
+    }
   }
 }
 
