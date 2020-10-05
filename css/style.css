@@ -75,14 +75,10 @@ footer p {
   max-width: none;
 }
 
-.home {
-  height: 100vh;
-}
-
 .splash-animation {
   height: 100vh;
   margin: 0;
-  line-height: 0;
+  line-height: 0.9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -93,7 +89,7 @@ footer p {
 }
 .splash-animation div > span > span {
   opacity: 0;
-  animation: fadeInFromNone 4.75s forwards;
+  animation: fadeInFromNone 4s forwards;
 }
 @media (orientation: landscape) {
   .splash-animation {
@@ -127,60 +123,42 @@ footer p {
   }
 }
 
-#changing {
-  line-height: 1;
-}
-
 #lives {
-  line-height: 1;
   animation-delay: 0.5s;
 }
 
 #with {
-  line-height: 1;
-  animation-delay: 1.2s;
+  animation-delay: 0.9s;
 }
 
 #dedication {
-  line-height: 1;
-  animation-delay: 1.6s;
+  animation-delay: 1.3s;
 }
 
 #care {
-  animation-delay: 2.2s;
-  line-height: 0.9;
+  animation-delay: 1.75s;
 }
 
 #ampersand {
-  animation-delay: 2.6s;
+  animation-delay: 2.15s;
 }
 
 #constant {
-  animation-delay: 3.2s;
-  line-height: 0.8;
+  animation-delay: 2.65s;
 }
 
 #strides {
-  animation-delay: 3.75s;
-  line-height: 1.1;
+  animation-delay: 3.15s;
 }
 
 #towards {
-  animation-delay: 4.25s;
-  line-height: 0.7;
+  animation-delay: 3.55s;
 }
 
 #excellence {
-  line-height: 1.4;
   opacity: 0;
-  animation-delay: 4.75s;
+  animation-delay: 4s;
 }
-@media (device-width: 414px) and (device-height: 896px) {
-  #excellence {
-    line-height: 1.3;
-  }
-}
-
 #enter-container {
   height: 35vh;
   display: flex;
@@ -188,7 +166,7 @@ footer p {
   align-items: center;
   opacity: 0;
   animation: fadeInFromNone 5s forwards;
-  animation-delay: 5.5s;
+  animation-delay: 5s;
 }
 @media (orientation: landscape) {
   #enter-container {
@@ -275,6 +253,18 @@ blockquote {
   padding: 6.5rem 2.5%;
   display: flex;
   flex-direction: column;
+}
+
+.content {
+  min-height: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.bottom {
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 .doc-pic > img {
