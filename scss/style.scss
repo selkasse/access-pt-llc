@@ -1,0 +1,494 @@
+@import "config";
+@import "mediaqueries";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: $font;
+  font-size: $baseFontSize;
+  $h1: 3.052em;
+  $h2: 2.441em;
+  $h3: 1.953em;
+  $h4: 1.563em;
+  $h5: 1.25em;
+  $smallText: 0.8em;
+}
+
+header {
+  padding-top: 2vh;
+  background: $headerBackground;
+  font-size: $headerFontSize;
+  color: $white;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $headerHeight;
+  box-shadow: $level-4;
+  > h1 {
+    margin-bottom: 0.1rem;
+  }
+
+  > div {
+    font-size: $sloganFontSize;
+    color: $lightGreen;
+  }
+  > nav {
+    margin-top: 0.25rem;
+  }
+  > nav a {
+    font-size: $navFontSize;
+    color: $yellow;
+    text-decoration: none;
+  }
+  nav a:hover {
+    border-bottom: solid 2px $lightGreen;
+  }
+  nav a + a {
+    margin-left: 10px;
+  }
+}
+
+footer {
+  background: $lightGreen;
+  color: $white;
+  box-shadow: $level-3;
+  // margin-top: 3vw;
+  // padding: 2rem var(--containerPadding);
+  text-align: center;
+  > nav a {
+    color: $green;
+    text-decoration: none;
+    font-size: $baseFontSize;
+    @include media("portrait") {
+      font-size: $baseFontSize - 25%;
+    }
+  }
+  nav a + a {
+    margin-left: 1vw;
+  }
+  nav a:hover {
+    border-bottom: solid 2px $green;
+  }
+}
+
+// .bottom {
+//   bottom: 0;
+// }
+footer p {
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  margin-top: 0;
+  max-width: none;
+}
+
+// .home {
+//   height: 100vh;
+// }
+
+.splash-animation {
+  height: 100vh;
+  margin: 0;
+  line-height: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $containerPadding;
+  overflow: hidden;
+
+  color: $white;
+  font-size: 14vw;
+
+  div > span > span {
+    opacity: 0;
+    animation: fadeInFromNone 4s forwards;
+  }
+
+  @include media("landscape") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+#animation {
+  margin-top: 6vh;
+  @include media(">=tablet") {
+    font-size: 10vw;
+  }
+  @include media("landscape") {
+    margin-top: 0;
+    font-size: $baseFontSize - 85%;
+  }
+
+  @include media("Nexus7") {
+    margin-top: 5vh;
+  }
+
+  @include media("portrait") {
+    margin-top: 0;
+  }
+}
+
+#changing {
+  // line-height: 1;
+}
+#lives {
+  // line-height: 1;
+  animation-delay: 0.5s;
+}
+#with {
+  // line-height: 1;
+  animation-delay: 0.9s;
+}
+#dedication {
+  // line-height: 1;
+  animation-delay: 1.3s;
+}
+#care {
+  animation-delay: 1.75s;
+  // line-height: 0.9;
+}
+#ampersand {
+  animation-delay: 2.15s;
+}
+#constant {
+  animation-delay: 2.65s;
+  // line-height: 0.8;
+}
+
+#strides {
+  animation-delay: 3.15s;
+  // line-height: 1.1;
+}
+
+#towards {
+  animation-delay: 3.55s;
+  // line-height: 0.7;
+}
+
+#excellence {
+  // line-height: 1.4;
+  opacity: 0;
+  animation-delay: 4s;
+
+  @include media("iPhone11") {
+    // line-height: 1.3;
+  }
+}
+
+#enter-container {
+  height: 35vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInFromNone 5s forwards;
+  animation-delay: 5s;
+
+  @include media("landscape") {
+    padding-top: 0;
+    margin-top: 0;
+    margin-right: 5vw;
+
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  @include media("portrait") {
+    align-items: flex-start;
+    padding-top: 4vh;
+  }
+  @include media("landscape", "Nexus7") {
+    justify-content: flex-start;
+    margin-right: 0;
+  }
+}
+
+blockquote {
+  margin: 10px;
+  padding: 6em;
+  background: $lightGreen;
+  box-shadow: $level-3;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  > img {
+    box-shadow: $level-4;
+    // outline: 1px solid $lightGreen;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+}
+
+.card {
+  padding: 2em;
+  background: $lightGreen;
+  box-shadow: $level-3;
+  color: $green;
+  border-radius: 10px;
+}
+
+.quote-author {
+  color: $white;
+}
+.enter {
+  line-height: 1;
+  margin-bottom: 0;
+
+  text-decoration: none;
+  color: $yellow;
+  font-size: $baseFontSize + 100%;
+}
+
+.enter-animated {
+  padding-top: 0;
+  margin-top: 0;
+  grid-column-start: 3;
+
+  background-clip: text;
+  animation: fadeInFromNone 2s;
+}
+
+@keyframes fadeInFromNone {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.container {
+  padding: ($headerHeight + 2rem) $containerPadding;
+  display: flex;
+  flex-direction: column;
+  // height: 100vh;
+}
+
+.content {
+  min-height: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.bottom {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.doc-pic {
+  > img {
+    width: 100%;
+  }
+}
+
+a[href^="tel"] {
+  text-decoration: none;
+  color: $lightGreen;
+  pointer-events: none;
+}
+
+#phone a[href^="tel"] {
+  color: $yellow;
+  pointer-events: auto;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  background: $cardBg;
+  color: $black;
+  box-shadow: $level-3;
+}
+
+//* From type-scale.com *********************************
+@import url("https://fonts.googleapis.com/css?family=Nunito:400|Nunito:400");
+
+html {
+  font-size: $baseFontSize;
+} /*16px*/
+
+body {
+  background-color: $green;
+  font-family: $font;
+  font-weight: 400;
+  line-height: 1.65;
+  color: $lightGreen;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {
+  font-size: 2.441em;
+}
+
+h3 {
+  font-size: 1.953em;
+}
+
+h4 {
+  margin-top: 3vh;
+  margin-bottom: 0;
+  font-size: 1.4em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+
+small,
+.text_small {
+  font-size: 0.8em;
+}
+//* -- END type-scale.com *******************************
+
+@media screen and (min-width: 360px) {
+  header {
+    font-size: $headerFontSize + 6%;
+    height: $headerHeight + 0.5rem;
+
+    > nav a {
+      font-size: $navFontSize + 5%;
+    }
+  }
+  h4 {
+    font-size: 1.53em;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  $offset: 1.25rem;
+  header {
+    font-size: $headerFontSize + 12%;
+    height: $headerHeight + $offset;
+
+    > nav a {
+      font-size: $navFontSize + 8%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  $offset: 2rem;
+  header {
+    font-size: $headerFontSize + 20%;
+    height: $headerHeight + $offset;
+
+    > nav a {
+      font-size: $navFontSize + 10%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .photos {
+    flex-direction: row;
+    > img {
+      width: 33%;
+    }
+    img + img {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  $offset: 2.5rem;
+
+  header {
+    font-size: $headerFontSize + 25%;
+    height: $headerHeight + $offset;
+    > blockquote {
+      font-size: $sloganFontSize + 25%;
+    }
+    > nav a {
+      font-size: $navFontSize + 11%;
+    }
+  }
+
+  .container {
+    padding: ($headerHeight + 2rem + $offset) $containerPadding;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  $padding: $containerPadding + 10%;
+  .container {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  $padding: $containerPadding + 15%;
+  .container {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  $padding: $containerPadding + 20%;
+
+  .container {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
+@media (min-aspect-ratio: 4/3) and (max-aspect-ratio: 8/5) {
+  #animation {
+    padding-top: 12vh;
+  }
+  #enter-container {
+    padding-top: 12vh;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 972px) and (min-height: 500px) and (orientation: portrait) {
+  .splash-animation {
+    font-size: 6vw;
+  }
+}
+// add arbitrary comment to test live reload
