@@ -225,6 +225,7 @@ blockquote {
 
 .file {
   text-decoration: none;
+  display: block;
 }
 
 .card {
