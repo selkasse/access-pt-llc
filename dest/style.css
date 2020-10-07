@@ -223,6 +223,10 @@ blockquote {
   width: 100%;
 }
 
+.file {
+  text-decoration: none;
+}
+
 .card {
   padding: 2em;
   background: #abd1c6;
@@ -234,7 +238,7 @@ blockquote {
   margin-top: 0;
 }
 .card > a {
-  color: #fffffe;
+  color: #004643;
 }
 
 .quote-author {
