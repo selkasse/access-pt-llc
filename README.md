@@ -1,4 +1,4 @@
-# access-pt-llc
+# Access Physical Therapy
 
 Codebase for [Access Physical Therapy](https://accessphysicaltherapyllc.com/)
 
